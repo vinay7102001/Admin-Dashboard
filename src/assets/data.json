@@ -1,0 +1,93 @@
+{
+  "catogories": [
+    {
+      "value": 40,
+      "heading": "Laptop"
+    },
+    {
+      "value": 70,
+      "heading": "Shoes"
+    },
+    {
+      "value": 100,
+      "heading": "Cameras"
+    },
+    {
+      "value": 68,
+      "heading": "Jeans"
+    }
+  ],
+
+  "transcation": [
+    {
+      "id": "kdsdbsb",
+      "quantity": 4,
+      "discount": 300,
+      "amount": 4000,
+      "status": "Processing"
+    },
+    {
+      "id": "kdsd",
+      "quantity": 4,
+      "discount": 300,
+      "amount": 4000,
+      "status": "Processing"
+    },
+    {
+      "id": "kdb",
+      "quantity": 4,
+      "discount": 300,
+      "amount": 4000,
+      "status": "Processing"
+    },
+    {
+      "id": "kb",
+      "quantity": 4,
+      "discount": 300,
+      "amount": 4000,
+      "status": "Processing"
+    },
+    {
+      "id": "k",
+      "quantity": 4,
+      "discount": 300,
+      "amount": 4000,
+      "status": "Processing"
+    },
+    {
+      "id": "kb",
+      "quantity": 4,
+      "discount": 300,
+      "amount": 4000,
+      "status": "Processing"
+    },
+    {
+      "id": "kb",
+      "quantity": 4,
+      "discount": 300,
+      "amount": 4000,
+      "status": "Processing"
+    },
+    {
+      "id": "kb",
+      "quantity": 4,
+      "discount": 300,
+      "amount": 4000,
+      "status": "Processing"
+    },
+    {
+      "id": "kb",
+      "quantity": 4,
+      "discount": 300,
+      "amount": 4000,
+      "status": "Processing"
+    },
+    {
+      "id": "kb",
+      "quantity": 4,
+      "discount": 300,
+      "amount": 4000,
+      "status": "Processing"
+    }
+  ]
+}

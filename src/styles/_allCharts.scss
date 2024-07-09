@@ -1,0 +1,31 @@
+.chartCOntainer {
+  background-color: white;
+  // padding: rem;
+  // @include flex(column);
+  margin-top: 1rem;
+  overflow-y: auto;
+  h1 {
+    padding-left: 4rem;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  section {
+    @include flex(column, center, center);
+    .bar_chart {
+      width: 80%;
+      margin-bottom: 2rem;
+      @include flex(column);
+    }
+    h3 {
+      margin: 1rem 0rem;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .pie_doughnut_chart {
+      margin-bottom: 1rem;
+      height: 40vh;
+    }
+  }
+}

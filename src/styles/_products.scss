@@ -1,0 +1,220 @@
+main {
+  .mainContainer {
+    margin-top: 1rem;
+    background-color: white;
+    // @include sqaure(100%);
+    height: 97%;
+    position: relative;
+    .Product_table {
+      > h2 {
+        padding: 1rem;
+      }
+
+      .table {
+        width: 100%;
+        padding: 1rem;
+        th {
+          padding-bottom: 2rem;
+          text-align: start;
+          color: rgba(0, 0, 0, 0.5);
+          cursor: pointer;
+        }
+        td {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.132);
+          padding-bottom: 0.3rem;
+          // display: flex;
+          // text-align: center;
+          img {
+            height: 60px;
+            width: 70px;
+          }
+
+          a {
+            border: 1px solid blue;
+            padding: 0.2rem;
+            border-radius: 10px;
+            color: blue;
+            background-color: rgba(0, 0, 255, 0.2);
+            &:hover {
+              color: rgba(0, 0, 255, 0.7);
+              background-color: rgba(0, 0, 255, 0.1);
+              border: 1px solid rgba(0, 0, 255, 0.7);
+            }
+          }
+        }
+      }
+    }
+    .addNewData {
+      svg {
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        background-color: red;
+        font-size: 2.2rem;
+        padding: 0.3rem;
+        border-radius: 50%;
+        color: white;
+
+        &:hover {
+          background-color: rgb(255, 0, 0, 0.3);
+          color: rgba(255, 0, 0, 0.8);
+        }
+      }
+    }
+  }
+}
+
+.add_new_product {
+  @include flex();
+  section {
+    width: 370px;
+    max-width: 300px;
+    padding: 3rem;
+    height: 85vh;
+    background-color: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.132);
+    position: relative;
+    border-radius: 10px;
+
+    strong {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+
+    .product_managment {
+      @include flex(column, unset, unset, 0.5rem);
+      margin-top: 1rem;
+      > p {
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.7);
+        margin-bottom: 0.5rem;
+      }
+      img {
+        width: 100%;
+        height: 50vh;
+        object-fit: fill;
+        object-position: center;
+      }
+      > div {
+        @include flex(column, center, center, 0.3rem);
+        span {
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          color: rgba(0, 0, 0, 0.7);
+        }
+        h2 {
+          margin-top: 0.3rem;
+          font-weight: bold;
+        }
+      }
+    }
+
+    > h2 {
+      text-align: center;
+      text-transform: uppercase;
+      color: rgb(0, 0, 0, 0.7);
+    }
+
+    .transction_order_card {
+      @include flex();
+      margin-top: 1.3rem;
+
+      img {
+        @include sqaure(4rem);
+        border-radius: 5px;
+        // object-fit: cover;
+      }
+      > span {
+        margin-left: auto;
+      }
+    }
+  }
+
+  article {
+    height: 85vh;
+    width: 300px;
+    max-width: 300px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.132);
+    padding: 1rem;
+
+    form {
+      @include flex(column, center, center, 0.5rem);
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 0.5rem;
+      }
+      div {
+        width: 100%;
+        @include flex(column, center, start, 0.1rem);
+
+        input {
+          @include inputStyle(
+            100%,
+            0.5rem,
+            unset,
+            1px solid rgba(0, 0, 0, 0.3)
+          );
+        }
+      }
+      img {
+        height: 80px;
+        width: 120px;
+        object-fit: contain;
+      }
+      button {
+        margin-top: 1rem;
+        width: 100%;
+        padding: 0.7rem;
+        border: none;
+        background-color: rgba(0, 0, 255, 0.8);
+        color: white;
+        border-radius: 3px;
+
+        &:hover {
+          background-color: rgba(0, 0, 255, 0.4);
+          color: rgba(0, 0, 0, 0.9);
+          cursor: pointer;
+        }
+      }
+    }
+    > h2 {
+      text-align: center;
+      text-transform: uppercase;
+      color: rgb(0, 0, 0, 0.7);
+    }
+    .transaction_order_info {
+      padding-left: 1rem;
+      h5 {
+        margin-bottom: 0.5rem;
+        margin-top: 1.5rem;
+        color: black;
+        font-size: 1rem;
+      }
+      p {
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+        // word-wrap: break-word;
+      }
+      button {
+        margin-top: 1.5rem;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        background-color: blue;
+        color: black;
+        padding: 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}

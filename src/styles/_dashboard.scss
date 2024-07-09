@@ -1,0 +1,204 @@
+.dashboard {
+  overflow-y: auto;
+
+  .bar {
+    height: 3rem;
+    @include flex(row, unset);
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.37);
+
+    > input {
+      margin-right: auto;
+      @include inputStyle(100%, 1rem 0);
+    }
+    > svg {
+      font-size: 1.2rem;
+      opacity: 0.7;
+    }
+    > img {
+      @include sqaure(2rem);
+      border-radius: 50%;
+    }
+  }
+
+  > section {
+    @include flex(row, space-between);
+    margin-top: 1rem;
+    margin-right: 1rem;
+    > article {
+      min-width: 10rem;
+      height: 6rem;
+      @include flex(row, center, center, 0.5rem);
+      background-color: white;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border-radius: 5px;
+      box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.1);
+      .wedgetdata {
+        @include flex(column, center, unset, 0);
+        > p {
+          font-size: 0.8rem;
+          line-height: 0.6rem;
+        }
+        > span {
+          font-size: 0.8rem;
+        }
+      }
+
+      .circle {
+        position: relative;
+        @include sqaure(4rem);
+        @include flex();
+        border-radius: 50%;
+        &::before {
+          content: "";
+          @include sqaure(3rem);
+          @include posCenetr();
+          background-color: white;
+          border-radius: 50%;
+        }
+        > span {
+          font-size: 0.8rem;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .revenue_inventory_section {
+    @include flex(row, center, unset);
+    margin-top: 2rem;
+    margin-right: 1rem;
+
+    h2 {
+      color: rgba(0, 0, 0, 0.5);
+      @include heading();
+      padding: 0.5rem 1rem;
+    }
+
+    div {
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .revenue_chart {
+      @include flex(column);
+      width: 100%;
+      padding: 1rem 0rem 1rem 0.2rem;
+      // overflow: auto;
+    }
+
+    .inventory {
+      @include flex(column, center, unset, 1rem);
+      // margin-right: 0.5rem;
+
+      > div {
+        @include flex(coloumn, center, center, 0.5rem);
+        overflow-y: auto;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+
+        > span {
+          color: rgba(0, 0, 0, 0.37);
+        }
+
+        .inv_bar {
+          width: 100%;
+          background-color: rgb(240, 240, 240);
+          height: 0.5rem;
+        }
+
+        > p {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .pie-table {
+    @include flex(row, center, center, 3rem);
+    margin-top: 2rem;
+    margin-right: 1rem;
+
+    div {
+      background-color: #ffffff;
+      // box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.132);
+      border-radius: 10px;
+    }
+
+    .pie {
+      box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.132);
+      height: 22rem;
+      @include flex(column, center, center, 0rem);
+      > h2 {
+        padding-top: 0.5rem;
+        @include heading(2px, 200);
+      }
+
+      > div {
+        position: relative;
+        width: 100%;
+        > svg {
+          @include posCenetr();
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .table_data {
+      box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.132);
+      height: 22rem;
+      width: 100%;
+      overflow: auto;
+      .transactionBox {
+        > h2 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .table {
+          width: 100%;
+          th,
+          td {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.132);
+            padding: 1rem;
+            // display: flex;
+            text-align: center;
+          }
+        }
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+.Prev_Next_page {
+  @include flex();
+
+  button {
+    font-size: 1.2rem;
+    padding: 0.2rem 1rem;
+    border-radius: 8px;
+    background-color: rgb(46, 46, 249);
+    color: #ffffff;
+    border: none;
+
+    &:hover {
+      background-color: rgba(46, 46, 249, 0.5);
+      color: rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+    }
+    &:disabled {
+      background-color: rgba(46, 46, 249, 0.1);
+      color: rgba(46, 46, 249, 0.1);
+      cursor: auto;
+    }
+  }
+  p {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
